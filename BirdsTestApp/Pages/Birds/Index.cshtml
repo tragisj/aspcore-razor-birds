@@ -1,0 +1,89 @@
+﻿@page
+@using Birds
+
+@{
+    Layout = null;
+}
+
+@model IndexModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Birds Test Demo - Index</title>
+    <script src="lib/jquery/dist/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+                $('td.common-name').css('font-family', 'courier new');
+                $('th').css('background-color', 'lightblue');
+
+            }
+        );
+
+
+
+
+    </script>
+    
+    
+    
+</head>
+<body>
+
+    <h2>Birds</h2>
+
+    <a asp-page="Add">Add a Bird</a>
+
+    <h3>@Model.Message</h3>
+
+    <table>
+        <thead>
+        <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Scientific Name
+        </th>
+        <th>
+            Wingspan
+        </th>
+        <th>
+            Distribution
+        </th>
+        <th>
+            ID
+        </th>
+        </thead>
+        <tbody>
+        @foreach (var bird in Model.Birds)
+        {
+            <tr>
+                <td class="common-name">
+                    @bird.CommonName
+                </td>
+                <td>
+                    @bird.ScientificName
+                </td>
+                <td>
+                    @(bird.WingSpan + " (mm)")
+                </td>
+                <td>
+                    @bird.Distribution
+                </td>
+                <td>
+                    @bird.ID
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@bird.ID">Edit</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</body>
+</html>
