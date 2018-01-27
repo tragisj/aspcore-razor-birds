@@ -1,5 +1,5 @@
 ﻿@page
-@using Birds
+@using BirdsTestApp.Pages.Birds
 
 @{
     Layout = null;
@@ -16,21 +16,20 @@
     <script src="lib/jquery/dist/jquery.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-        $(document).ready(function() {
-
-                $('td.common-name').css('font-family', 'courier new');
-                $('th').css('background-color', 'lightblue');
-
-            }
-        );
+        $(document).ready(function () {
 
 
+            //$('div[title*="Title"]').html('Updated Div Value due to Title').css('background-color','red');
+            //$("input[name~='man']").val("mr. man is in it!");
+            $("div[title='Div Title']").html("mr. man attrib is in it!");
 
+            $("table td").each(function() {
+                $(this).css("background-color", "pink");
+            });
 
+                });
     </script>
-    
-    
-    
+
 </head>
 <body>
 
@@ -40,49 +39,60 @@
 
     <h3>@Model.Message</h3>
 
-    <table>
+<div id="TestDiv" title="Div Title">this is my div text</div>
+
+
+<div id="TestDiv" title="Contains A Title">this is my contains text</div>
+
+
+
+
+<table>
         <thead>
-        <tr>
-        <th>
-            Name
-        </th>
-        <th>
-            Scientific Name
-        </th>
-        <th>
-            Wingspan
-        </th>
-        <th>
-            Distribution
-        </th>
-        <th>
-            ID
-        </th>
-        </thead>
-        <tbody>
-        @foreach (var bird in Model.Birds)
-        {
             <tr>
-                <td class="common-name">
-                    @bird.CommonName
-                </td>
-                <td>
-                    @bird.ScientificName
-                </td>
-                <td>
-                    @(bird.WingSpan + " (mm)")
-                </td>
-                <td>
-                    @bird.Distribution
-                </td>
-                <td>
-                    @bird.ID
-                </td>
-                <td>
-                    <a asp-page="Edit" asp-route-id="@bird.ID">Edit</a>
-                </td>
-            </tr>
-        }
+                <th>
+                    Name
+                </th>
+                <th>
+                    Scientific Name
+                </th>
+                <th>
+                    Wingspan
+                </th>
+                <th>
+                    Distribution
+                </th>
+                <th>
+                    ID
+                </th>
+        </thead>
+    <tbody>
+    
+    
+
+    @foreach (var bird in Model.Birds)
+            {
+                <tr>
+                    <td class="common-name">
+                        @bird.CommonName
+                    </td>
+                    <td>
+                        @bird.ScientificName
+                    </td>
+                    <td>
+                        @(bird.WingSpan + " (mm)")
+                    </td>
+                    <td>
+                        @bird.Distribution
+                    </td>
+                    <td>
+                        @bird.ID
+                    </td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@bird.ID">Edit</a>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </body>

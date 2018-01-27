@@ -21,6 +21,8 @@ namespace BirdsTestApp.Models
         [Required(ErrorMessage = "Please enter the bird's wingspan")]
         public int WingSpan { get; set; }
 
+        public string ColorMarking { get; set; }
+
         [DisplayName("Range and Distribution:")]
         [Required(ErrorMessage = "Please enter the bird's range / distribution")]
         public string Distribution { get; set; }

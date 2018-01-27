@@ -2,10 +2,9 @@ D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.deps
 D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.runtimeconfig.json
 D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.runtimeconfig.dev.json
 D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.dll
-D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.csprojResolveAssemblyReference.cache
+D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.pdb
 D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.csproj.CoreCompileInputs.cache
 D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.AssemblyInfoInputs.cache
 D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.AssemblyInfo.cs
-D:\projects\tragisj\razor\BirdsTestApp\bin\Debug\netcoreapp2.0\BirdsTestApp.pdb
 D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.dll
 D:\projects\tragisj\razor\BirdsTestApp\obj\Debug\netcoreapp2.0\BirdsTestApp.pdb
